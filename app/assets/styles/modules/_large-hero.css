@@ -1,5 +1,9 @@
 .large-hero{
     position: relative;
+    &__image{
+        display: block;
+        border-bottom: 10px solid var(--main-blue);
+    }
     &__text-content{
         position: absolute;
         transform: translateY(-50%);
@@ -11,32 +15,32 @@
     &__title{
         font-weight: 300;
         color: var(--main-blue);
-        font-size: 1.1rem;
+        font-size: 2.2rem;
         margin: 0;
         @mixin atSmall{
-            font-size: 2rem;
-        }
-        @mixin atMedium{
-            font-size: 3.2rem;
-        }
-        @mixin atLarge{
-            font-size: 4.8rem;            
+            font-size: 4.8rem;
         }
     }
     &__subtitle{
         font-weight: 300;
         color: var(--main-blue);
-        font-size: 2.9rem;
+        font-size: 1.5rem;
         margin: 0;
+        @mixin atSmall{
+            font-size: 2.9rem;
+        }
     }
     &__description{
         max-width: 30rem; /*480px */
         margin-left: auto;
         margin-right: auto;
         font-weight: 300;
-        font-size: 1.875rem;
+        font-size: 1.1rem;
         color: #fff;
         text-shadow: 2px 2px 0 rgba(0, 0, 0, .1);
+        @mixin atSmall{
+            font-size: 1.875rem;            
+        }
     }
 
 }
