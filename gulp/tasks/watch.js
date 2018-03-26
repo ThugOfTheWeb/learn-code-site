@@ -6,7 +6,7 @@ gulp.task('watch', () => {
     browserSync.init({
         notify: false,
         server: {
-            baseDir: "app"
+            baseDir: "./app"
         }
     });
 
@@ -16,6 +16,7 @@ gulp.task('watch', () => {
 
 });
 
-gulp.task('cssInject', ['styles'], () => gulp.src('.app/temp/styles/styles.css')
-    .pipe(browserSync.stream())
-);
+gulp.task('cssInject', ['styles'], function() {
+    gulp.src('./app/temp/styles/styles.css')
+    .pipe(browserSync.stream());
+});
