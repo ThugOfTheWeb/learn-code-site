@@ -7,6 +7,9 @@
         font-size: 3.75rem;
     }
 
+    &--blue{
+        color: var(--main-blue);
+    }
     strong{
         font-weight: 500;
     }
@@ -16,6 +19,8 @@
         margin-right: auto;
         margin-bottom: .6rem;
         @mixin atSmall{
+            position: relative;
+            top: 8px;
             margin-bottom: 0;
             display: inline-block;
             margin-left: 0;
